@@ -25,9 +25,18 @@ function captureData() {
 
 function writeToTable(obj) {
   var title = obj.title
-  console.log(title)
- var newBod = table.add("tbody") 
-  var newRow = newBod.append('tr')
-  var newData = newRow.append("td")
-  newData.text(title)
+  var tBod = $("tbody");
+  var tRow = $("<tr>");
+  var tDat = $("<td>")
+  tDat.text(title)
+  tRow.append(tDat)
+  tBod.append(tRow)
+  table.append(tBod)
+  // console.log(title)
+  //
+  //
+  // var newBod = table.add("tbody")
+  // var newRow = newBod.append('<tr>')
+  // var newData = newRow.append("<td>")
+  // newData.text(title)
 }
